@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- </script>
+<p id="demo7"></p>
+<script>
+
+  let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  function isPrime(num) {
+    console.log(num);
+    if (num % 2 == 0)
+      true;
+    else
+      false;
+  }
+  // console.log(arr1.map(e => isPrime(e)));
+  arr1.map(e => console.log(isPrime(e)));
+  // document.getElementById("demo7").innerHTML =
+</script> -->
+
+    <h2>Prime Number</h2>
+    <p id="demo"></p>
+    <script>
+
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        function isPrime(num) {
+            console.log(num);
+            if (num % 2 == 0) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        const primeBoolean = arr.map(e => isPrime(e));
+
+        const primeNumber = arr.filter((e, index) => primeBoolean[index]);
+        console.log("Prime Numbers:", primeNumber);
+
+
+        // document.getElementById("demo").innerHTML=isPrime(num);
+    </script>
+
+
+    <h2>Maximum elements present in an Array</h2>
+    <p>let arr1=[12,50,45,100,30]</p>
+    <p id="demo1"></p>
+    <script>
+        let arr1 = [12, 50, 45, 100, 30];
+
+        function largestNumber(arr) {
+            let max = arr1[0];
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] > max) {
+                    max = arr1[i];
+                }
+
+            }
+            return max;
+        }
+        document.getElementById("demo1").innerHTML = largestNumber(arr1);
+    </script>
+
+
+
+    <h2>Minimum elements present in an Array</h2>
+    <p>let arr2=[12,50,45,100,30]</p>
+    <p id="demo2"></p>
+    <script>
+        let arr2 = [12, 50, 45, 100, 30];
+
+        function smallestNumber(arr2) {
+            let min = arr2[0];
+            for (let i = 0; i < arr2.length; i++) {
+                if (arr2[i] < min) {
+                    min = arr2[i];
+                }
+
+            }
+            return min;
+        }
+        document.getElementById("demo2").innerHTML = smallestNumber(arr2);
+    </script>
+
+    <h2>SecondLargest elements present in an Array</h2>
+    <p>let arr3=[12,50,45,100,30]</p>
+    <p id="demo3"></p>
+    <script>
+        let arr3 = [12, 50, 45, 100, 30];
+        function secondLargest() {
+
+            let largest = arr3[0];
+            let secondlargest = -Infinity;
+
+            for (let i = 0; i < arr3.length; i++) {
+
+                if (arr3[i] > largest) {
+                    secondLargest = largest;
+                    largest = arr3[i];
+                }
+
+                else if (arr3[i] > largest && arr3[i] < secondLargest) {
+                    secondLargest = arr3[i];
+                }
+
+            }
+            return secondLargest;
+        }
+
+        document.getElementById("demo3").innerHTML = secondLargest(arr3);
+    </script>
+
+
+    <h2>Sort By Ascending Order</h2>
+    <p id="demo4"></p>
+
+    <!-- <script>
+        let sortArr = [5, 3, 4, 2, 1];
+        function sortProcess() {
+            
+            for (let i = 0; i < sortArr.length; i++) {
+                let a = sortArr[i];
+                let b = sortArr[i + 1];
+                // swapping process
+                if (a > b) {
+                    b = a;
+                    a = sortArr[i];
+                }
+                else{
+                    b = sortArr[i];
+                }
+
+            }
+            return sortProcess;
+        }
+        document.getElementById("demo4").innerHTML= sortProcess(sortArr)
+ 
+
+        
+    </script> -->
+
+    <!-- <script>
+         let sortArr = [5, 3, 4, 2, 1];
+
+         function sortProcess(number_1, number_2){
+
+            if(number_2 > number_1){
+
+                let temp_variable = number_1;
+                   number_1 = number_2;
+                   number_2 = temp_variable;   
+            
+         }
+
+         else{
+            temp = number_1;
+         }
+
+         return sortProcess;
+        }
+        document.getElementById("demo4").innerHTML= sortProcess(sortArr);
+        
+    </script> -->
+
+
+    <script>
+        let arr4 = [5, 3, 4, 2, 1];
+        let temp = 0;
+        // let n;
+
+        function sortArr(n) {
+            console.log(n);
+            for (let i = 0; i < n.length; i++) {
+                for (let j = i + 1; j < n.length; j++) {
+
+                    if(arr4[i] > arr4[j]){
+
+                     temp = arr4[i];
+                    arr4[i] = arr4[j];
+                    arr4[j] = temp;
+                    }
+                    return 0;
+                }
+            
+            }
+        }
+        // console.log(sortArr(n));
+        // document.getElementById("demo4").innerHTML=sortArr(arr4)
+
+        const sortArray = arr4.map(e => sortArr(e));
+
+        const sortNumber = arr4.filter((e, index) => sortArray[index]);
+        console.log("Sort Numbers:", sortNumber);
+    </script>
+</body>
+
+</html>
